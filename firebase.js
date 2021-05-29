@@ -1,8 +1,19 @@
+import firebase from 'firebase/app';
+import 'firebase/auth';
+import 'firebase/firestore';
+
 const firebaseConfig = {
-  apiKey: 'AIzaSyDJqcJz4pWmOLb2x4_7xhHgENFu30OHDIY',
-  authDomain: 'signalchat-6e8f9.firebaseapp.com',
-  projectId: 'signalchat-6e8f9',
-  storageBucket: 'signalchat-6e8f9.appspot.com',
-  messagingSenderId: '2740716762',
-  appId: '1:2740716762:web:bf2244a16f003b0eda11e3'
+  apiKey: 'AIzaSyB4_Oh_dwmqv3DZO9KnnTbDLu0KNKlJFOQ',
+  authDomain: 'signal-clone-b9702.firebaseapp.com',
+  projectId: 'signal-clone-b9702',
+  storageBucket: 'signal-clone-b9702.appspot.com',
+  messagingSenderId: '59964656414',
+  appId: '1:59964656414:web:1942302ea13ffae651170f'
 };
+if (!firebase.apps.length) {
+  firebase.initializeApp(firebaseConfig);
+}
+
+export const auth = firebase.auth();
+
+export const db = firebase.firestore();
